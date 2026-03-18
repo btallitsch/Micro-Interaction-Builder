@@ -1,0 +1,14 @@
+{
+  "name": "micro-interaction-builder",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.16.4"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  }
+}
