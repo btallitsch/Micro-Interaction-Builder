@@ -1,6 +1,6 @@
 {
-  "name": "micro-interaction-builder-pro",
-  "version": "2.0.0",
+  "name": "micro-interaction-builder-saas",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",

@@ -1,20 +1,13 @@
-export default function CodeOutput({ config }) {
-  const code = `<motion.button
-  whileHover={{
-    scale: ${config.scale},
-    rotate: ${config.rotate}
-  }}
-  transition={{
-    duration: ${config.duration},
-    ease: "${config.ease}"
-  }}
->
-  Hover Me
-</motion.button>`
-
+export default function CodeOutput({config}){
   return (
-    <pre className="bg-zinc-800 p-4 rounded-xl text-sm w-[500px] overflow-x-auto">
-      {code}
-    </pre>
+<pre className="text-xs bg-zinc-900 p-4 rounded">
+{`<motion.button
+  whileHover={{
+    scale:${config.scale},
+    rotate:${config.rotate}
+  }}
+  transition={{duration:${config.duration}}}
+/>`}
+</pre>
   )
 }
