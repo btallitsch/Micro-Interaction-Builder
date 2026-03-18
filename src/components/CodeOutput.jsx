@@ -1,17 +1,19 @@
-import React from 'react'
-
-export default function CodeOutput({ settings }) {
-  const code = `
-<motion.button
-  whileHover={{ scale: ${settings.scale} }}
-  transition={{ duration: ${settings.duration} }}
+export default function CodeOutput({ config }) {
+  const code = `<motion.button
+  whileHover={{
+    scale: ${config.scale},
+    rotate: ${config.rotate}
+  }}
+  transition={{
+    duration: ${config.duration},
+    ease: "${config.ease}"
+  }}
 >
   Hover Me
-</motion.button>
-`
+</motion.button>`
 
   return (
-    <pre style={{ marginTop: 20, background: '#eee', padding: 10 }}>
+    <pre className="bg-zinc-800 p-4 rounded-xl text-sm w-[500px] overflow-x-auto">
       {code}
     </pre>
   )

@@ -1,15 +1,14 @@
-import React from 'react'
 import ControlPanel from './components/ControlPanel'
 import Preview from './components/Preview'
 import useAnimation from './hooks/useAnimation'
 
 export default function App() {
-  const { settings, updateSetting } = useAnimation()
+  const { config, update } = useAnimation()
 
   return (
-    <div style={{ display: 'flex', padding: 20 }}>
-      <ControlPanel settings={settings} updateSetting={updateSetting} />
-      <Preview settings={settings} />
+    <div className="flex h-screen">
+      <ControlPanel config={config} update={update} />
+      <Preview config={config} />
     </div>
   )
 }

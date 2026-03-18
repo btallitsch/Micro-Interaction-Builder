@@ -1,14 +1,16 @@
 import { useState } from 'react'
 
 export default function useAnimation() {
-  const [settings, setSettings] = useState({
+  const [config, setConfig] = useState({
     scale: 1.1,
-    duration: 0.3
+    rotate: 0,
+    duration: 0.3,
+    ease: "easeOut"
   })
 
-  const updateSetting = (key, value) => {
-    setSettings(prev => ({ ...prev, [key]: value }))
+  const update = (key, value) => {
+    setConfig(prev => ({ ...prev, [key]: value }))
   }
 
-  return { settings, updateSetting }
+  return { config, update }
 }
